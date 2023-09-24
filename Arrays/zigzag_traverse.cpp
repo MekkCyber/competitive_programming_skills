@@ -23,6 +23,13 @@
     if odd we start from the bottom : (3,0)->(2,1)->(1,2)->(0,3)
 */
 
+/*
+    The idea of the solution is either we go down or up. When we are going down and we are on the 0 column, we go down vertically only once
+    and inverse the direction to up. When we are going down and we are on the last row, we go right once and inverse the direction to up.
+    If we are in neither cases we just keep going down diagonally. The same thing in the up case. When going up and we find ourselves in the 
+    first row we move right and inverse the direction, if we are in the last column we move down and inverse the position. 
+*/
+
 // My approach
 #include <vector>
 
@@ -53,6 +60,60 @@ vector<int> zigzagTraverse(vector<vector<int>> array)
         {
           result.push_back(array[j][i - j]);
         }
+      }
+    }
+  }
+  return result;
+}
+
+// Solution Approach : less clean
+
+vector<int> zigzagTraverse(vector<vector<int>> array)
+{
+  // Write your code here.
+  bool goingDown = true;
+  int rows = array.size();
+  int cols = array[0].size();
+  int r = 0;
+  int c = 0;
+  vector<int> result;
+  while (r < rows && c < cols)
+  {
+    result.push_back(array[r][c]);
+    if (goingDown)
+    {
+      if (c == 0 && r != rows - 1)
+      {
+        r++;
+        goingDown = false;
+      }
+      else if (r == rows - 1)
+      {
+        c++;
+        goingDown = false;
+      }
+      else
+      {
+        r++;
+        c--;
+      }
+    }
+    else
+    {
+      if (r == 0 && c != cols - 1)
+      {
+        c++;
+        goingDown = true;
+      }
+      else if (c == cols - 1)
+      {
+        r++;
+        goingDown = true;
+      }
+      else
+      {
+        r--;
+        c++;
       }
     }
   }

@@ -12,7 +12,7 @@
 
 /*
     The idea behind the optimal solution in O(n) time is to keep a set or map of cumulative sums
-    if at a certain index we have a sum that was already present in the set or map it means we have
+    if at a certain index we have a sum that is already present in the set or map it means we have
     a subarray of sum 0, and we return true.
     The same goes if we find a sum of 0 then we retrun true directly
 */

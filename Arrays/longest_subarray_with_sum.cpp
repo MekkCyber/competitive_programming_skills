@@ -19,6 +19,8 @@
     of the startIndex and endIndex that give us the intended array
 */
 
+// Whenever you have a subarray problem think about using a left and right pointer !!!!!!!!!!!!!!
+
 // The solution approach
 
 using namespace std;

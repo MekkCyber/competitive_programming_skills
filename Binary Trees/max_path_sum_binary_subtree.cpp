@@ -13,8 +13,10 @@ output : 18 // 5 + 2 + 1 + 3 + 7
 
 /*
     The intuition is the same as the diameter problem, the only difference is that here we need to account for 
-    negative numbers so we check for the max(right.maxBranchSum+left.maxBranchSum+tree->value,left.maxBranchSum+tree->value,right.maxBranchSum+tree->value);
-    instead of just adding right.maxBranchSum+left.maxBranchSum+tree->value like we did in the diameter case
+    negative numbers so we check for the max(right.maxBranchSum+left.maxBranchSum+tree->value,left.maxBranchSum+tree->value,right.maxBranchSum+tree->value,tree->value);
+    instead of just adding right.maxBranchSum+left.maxBranchSum+tree->value like we did in the diameter case.
+    The same goes for maxSumBranch, when updating we check if the max(right.maxBranchSum,left.maxBranchSum) is going to imporve our sum, 
+    else we just give it the value of the node we are in
 */
 
 // My approach
@@ -48,7 +50,7 @@ TreeInfo dfs(BinaryTree *tree){
                                max(left.maxBranchSum+tree->value,\
                                right.maxBranchSum+tree->value));
   int maxPathSum = max(maxPathThroughNode,maxPathSumForNow);
-  int maxBranchSum = tree->value+max(right.maxBranchSum,left.maxBranchSum);
+  int maxBranchSum = max(tree->value+max(right.maxBranchSum,left.maxBranchSum),tree->value);
   return {maxBranchSum,maxPathSum};
 }
 

@@ -28,9 +28,9 @@ vector<int> getLongestPalindrom(string str,int i,int j){
 
 string longestPalindromicSubstring(string str) {
   vector<int> longestString = {0,1};
-  for (int i = 1; i<str.size()-1; i++){
+  for (int i = 1; i<str.size(); i++){
     vector<int> odd = getLongestPalindrom(str,i-1,i+1);
-    vector<int> even = getLongestPalindrom(str,i,i+1);
+    vector<int> even = getLongestPalindrom(str,i-1,i);
     vector<int> longest = odd[1]-odd[0] > even[1]-even[0] ? odd : even;
     longestString = longest[1]-longest[0] > longestString[1]-longestString[0] ? longest : longestString;
   }

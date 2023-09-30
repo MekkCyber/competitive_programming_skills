@@ -16,7 +16,7 @@ class SuffixTrie {
     this->endSymbol = '*';
     this->populateSuffixTrieFrom(str);
   }
-
+  // O(n²) time and space to construct where n is the length of the string)
   void populateSuffixTrieFrom(string str) {
     for (int i = 0; i<str.length(); i++){
       string substring = str.substr(i);

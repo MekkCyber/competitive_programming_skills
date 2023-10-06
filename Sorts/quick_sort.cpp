@@ -12,3 +12,35 @@
     we consider it sorted) and we do the same thing for the other subarray
 
 */
+
+#include <vector>
+using namespace std;
+void quickSortHelper(vector<int>& array, int l, int r);
+vector<int> quickSort(vector<int> array) {
+  // Write your code here.
+  quickSortHelper(array,0,array.size()-1);
+  return array;
+}
+
+void quickSortHelper(vector<int>& array, int l, int r) {
+  if (l>=r){
+    return;
+  }
+  int startIdx = l+1;
+  int endIdx = r;
+  int pivotIdx = l;
+  while (startIdx<=endIdx){
+    if (array[startIdx]>array[pivotIdx] && array[endIdx]<=array[pivotIdx]){
+      swap(array[startIdx],array[endIdx]);
+    }
+    if (array[startIdx]<=array[pivotIdx]){
+      startIdx++;
+    }
+    if (array[endIdx]>array[pivotIdx]){
+      endIdx--;
+    }
+  }
+  swap(array[endIdx],array[pivotIdx]);
+  quickSortHelper(array, l, endIdx-1);
+  quickSortHelper(array,endIdx+1, r);
+}

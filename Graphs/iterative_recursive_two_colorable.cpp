@@ -32,6 +32,7 @@ bool dfs(vector<vector<int>> edges,int node, int color, unordered_map<int,int>& 
     if (sibling==node || colors[sibling] == color){
       return false;
     } else if (!colors[sibling]){
+      
       bool sub_problem = dfs(edges,sibling,3-color,colors);
       if (!sub_problem){
         return false;

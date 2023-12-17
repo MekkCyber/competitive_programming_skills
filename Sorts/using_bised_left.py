@@ -1,6 +1,7 @@
 '''
 https://www.hackerrank.com/challenges/fraudulent-activity-notifications/problem?isFullScreen=true
 '''
+
 from bisect import bisect_left
 
 def activityNotifications(expenditure, d):

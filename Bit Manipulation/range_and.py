@@ -9,6 +9,7 @@ import sys
 
 
 def andProduct(a, b):
+    
     # the idea is to go through the binary representation of a and b and add their value multiplied by the proper power of 2 until we find a difference 
     # When that happens we just break out of the loop and we have our result, the reason is that in the smallest number we have a 0 in the ith position
     # and in the largest one we have a 1 in the ith position, for the range of numbers between these two numbers we must have one that switches the ith

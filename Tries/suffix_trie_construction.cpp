@@ -6,6 +6,7 @@ class TrieNode {
   unordered_map<char, TrieNode*> children;
 };
 
+
 class SuffixTrie {
  public:
   TrieNode* root;

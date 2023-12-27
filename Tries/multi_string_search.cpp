@@ -11,6 +11,7 @@
 
 // First approach : construct a Trie for the big string, and for every small string check if it exists in this trie : O(b²+ns) time and O(b²+n)
 // where b the size of the big string, n the number of small strings, and s the length of the longest small string
+
 using namespace std;
 
 class TrieNode

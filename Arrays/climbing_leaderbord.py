@@ -7,6 +7,7 @@ import random
 import re
 import sys
 
+
 def climbingLeaderboard(ranked, player):
     ranks = {}
     rank = 1

@@ -13,6 +13,7 @@
 
 */
 
+
 /*
     The first approach that comes to mind is start iterating over the array, and keep
     track of the peaks and their length, this might be tricky because there are a lot of

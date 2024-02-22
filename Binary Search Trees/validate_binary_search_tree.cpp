@@ -10,6 +10,7 @@
   BST nodes themselves or None / null.
 */
 
+
 /*
     The key idea is to notice that every node in the tree has a minimum value and a maximum value
     and for each node, for the bst to be valid, its value needs to lay in that interval

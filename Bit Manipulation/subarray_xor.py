@@ -8,6 +8,7 @@ import random
 import re
 import sys
 
+
 def sansaXor(arr):
     # Write your code here
     i = 0

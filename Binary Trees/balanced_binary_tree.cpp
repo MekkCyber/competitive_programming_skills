@@ -7,6 +7,7 @@
     at most <span>1</span>.
 */
 
+
 /*
     its just a dfs search to determine the heights of the left subtree and right subtree, if the difference
     is greater than 1 , the tree is not balanced else we keep the dfs. 

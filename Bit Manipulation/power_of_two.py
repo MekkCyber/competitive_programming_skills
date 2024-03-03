@@ -7,6 +7,7 @@ import random
 import re
 import sys
 
+
 def counterGame(n):
     if n==1 : 
         return "Richard"

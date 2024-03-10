@@ -7,7 +7,6 @@ import random
 import re
 import sys
 
-
 def getMinimumCost(k, c):
     sorted_c = sorted(c,reverse=True)
     print(sorted_c)

@@ -16,7 +16,6 @@
   exactly once before landing back on the starting index.
 */
 
-
 /*
     We need to verify that we visited all elements of the array
     if we go back to the first element and the counter is not equal to array.size() we have a problem

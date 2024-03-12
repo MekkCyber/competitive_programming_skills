@@ -38,7 +38,6 @@ using namespace std;
 class MinHeap {
  public:
   vector<int> heap;
-
   MinHeap(vector<int> vector) { heap = buildHeap(vector); }
   // O(n) time | O(1) space
   vector<int> buildHeap(vector<int>& vector) {

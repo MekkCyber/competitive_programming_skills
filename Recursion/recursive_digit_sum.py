@@ -7,6 +7,7 @@ import random
 import re
 import sys
 
+
 def superDigit(n, k):
     if len(n)==1 and k==1 : 
         return int(n)

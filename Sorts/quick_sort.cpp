@@ -12,7 +12,6 @@
     we consider it sorted) and we do the same thing for the other subarray
 
 */
-
 #include <vector>
 using namespace std;
 void quickSortHelper(vector<int>& array, int l, int r);

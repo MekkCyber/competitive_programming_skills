@@ -28,7 +28,6 @@
         rigourously that the cplxity is O(N). In fact this is one of the reasons of using sift down to build a heap over sift up, in sift up
         nodes near the bottom cost more to sift up, so the cplxity is O(Nlog(N)) in general)
 */
-
 #include <vector>
 using namespace std;
 

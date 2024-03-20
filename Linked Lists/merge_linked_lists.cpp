@@ -19,6 +19,7 @@ class LinkedList {
   }
 };
 
+
 LinkedList* mergeLinkedLists(LinkedList* headOne, LinkedList* headTwo) {
   LinkedList* currentOne = headOne;
   LinkedList* parentOne = nullptr;

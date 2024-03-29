@@ -7,7 +7,6 @@
     point in time.
     All class methods, when considered independently, should run in constant time
     and with constant space.
-
 */
 
 /*
